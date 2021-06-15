@@ -1,4 +1,4 @@
-// Objects are data collections composed of properties/keys that have values. They can be modified by adding new properties, modifiying the value of a propertie, deleting a property and others.
+// Objects are data collections composed of properties/keys that have values. They can be modified by adding new properties, modifying the value of a property, deleting a property and others.
 let car = {
   brand: 'Tesla',
   model: 'Model S',
