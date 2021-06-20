@@ -42,6 +42,7 @@ Datos claves:
 12. JavaScript se creo con el proposito de hacer que las paginas web fuesen mas dinamicas.
 13. El navegador que creo JavaScript fue Netscape.
 14. El primer nombre de JavaScript fue Mocha.
+15. Parse: Parsing means analyzing and converting a program into an internal format that a runtime environment can actually run, for example the JavaScript engine inside browsers.
 
 
 
