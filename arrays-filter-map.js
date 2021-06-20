@@ -8,13 +8,13 @@ let articles = [
   { name: 'Headphones', price: 1000 },
 ]
 
-// Filter, returns the articles that matches the condition
+// the filter method returns the articles that matches the condition
 const filteredArticles = articles.filter(function (article) {
   return article.price <= 500
 })
 console.log('Filtered articles: \n', filteredArticles)
 
-// Map, returns the value of the properties specified
+// The map method returns the value of the properties specified
 const mappedArticles = articles.map(function (article) {
   return article.name
 })

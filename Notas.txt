@@ -1,0 +1,36 @@
+Declarar una variable: se refiere a especificar al menos el tipo de variable y su nombre. Por ejemplo: let val;
+Inicializar una variable: significa asignarle algún valor a la variable.
+
+La principal diferencia que presenta var con respecto a let y const es el "Hoisting".
+
+Hoisting, es el proceso de declarar las variables y funciones antes de que se ejecute cualquier tipo de código, las variables tendrán el valor de undefined hasta que se corra la línea que las inicializa (asigna un valor).
+
+El Hoisting provoca que podamos llamar variables(var) o funciones antes de que sean declaradas.
+
+Las funciones se declaran primero que las variables.
+
+-----
+
+Coerción, se refiere a la conversión de un tipo de dato a otro. Existen dos tipos de coerción de en los lenguajes de programación.
+
+Coerción implícita, es cuando el lenguaje de programación, en este caso JavaScript, cambia el tipo de dato de las variables sin que se lo indiquemos.
+
+Coerción explicita, nosotros como desarrolladores indicamos que queremos hacer el cambio de un tipo de valor a otro tipo de valor. Por ejemplo, haciéndole un parseInt() a un string en JavaScript.
+
+Lenguaje débilmente tipado, son los lenguajes que permiten hacer operaciones con datos de distinto tipo. Estos lenguajes tienen un grado de coerción implícita muy alto.
+
+
+
+Las variables declaradas con var tienen un scope de funcion. Por ejemplo en la siguiente funcion la variable nombre solo es accesible dentro de la funcion mitades, no podemos acceder a ella desde fuera de la funcion. Si lo intentamos obtendriamos un !ReferenceError: nombre is not defined
+
+function mitades(numeros){
+  var resultado = [];
+  for(var i = 0; i < numeros.length; i++){
+    var numero = numeros[i];
+    var mitad = numero / 2;
+    resultado.push(mitad);
+  }
+  return resultado;
+}
+
+Las variables declaradas con let y const van a tener un alcance de bloque. Es decir, toda porcion de codigo encerrada entre llaves: {}

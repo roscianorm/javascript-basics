@@ -1,0 +1,55 @@
+Notas del V8
+Notas del Curso de JavaScript Engine (V8) y el Navegador
+
+V8, es el motor de JavaScript desarrollado por Google para su navegador Google Chrome
+
+V8, es uno de de los principales detonantes de la evolucion de JavaScript en los ultimos años.
+
+Node.js utiliza V8
+
+Global Environment: crea un entorno global en el navegador
+  1. Global Object: crea un bojeto global llamado window
+  2. this: crea el objeto this que hace referencia al objeto global window, this puede cambiar su valor dependiendo del contexto donde se use.
+  3. Outer Environment: ???
+  4. Execution Context: Una vez generado el contexto global, el motor(V8) comienza a correr nuestro codigo en un stack de tareas apiladas, en el siguiente orden:
+    4.1 Parser
+    4.2 AST(Abstract syntax tree) https://astexplorer.net/
+    4.3 Interpreter
+      4.3.1 Profiler(Monitor)
+      4.3.2 Compiler
+      4.3.3 Optimized code
+      Nota en esta seccion(4.3) es donde ocurre el hoisting
+    4.4 Bytecode
+
+# Una preguntica de examen
+Una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, asignandolas en memoria dentro de un contexto de ejecucion.
+
+
+
+Datos claves:
+
+1. AST, significa Abstract Syntax Tree.
+2. JavaScript es "Synchronous" lo que significa que solo puede procesar una tarea a la vez.
+3. JavaScript es un lenguaje que puede comportarse de manera "Asynchronous", se refiere a que hay ciertas funciones que nos ayudan a que JavaScript pueda trabajar tareas de forma simultanea.
+4. V8 es un motor de JavaScript inventado por Google para su navegador Google Chrome.
+5. V8 fue lanzado en el año 2008.
+6. El proceso de hoisting solo sucede las palabras reservadas var y function de JavaScript.
+7. El EventLoop es una especie de "watcher" u observador que mueve las tareas del callback queue hacía el call stack una vez que está vacío para que sean ejecutadas.
+8. Mark adn Sweep, es el algoritmo que nos ayuda a limpiar nuestra memoria cuando tenemos valores de variables que ya no utilizamos.
+9. El creador de JavaScript fue Brendan Eich.
+10. La primera version de JavaScript sale en el año 1995.
+11. Un motor de JavaScript es un interprete que compila codigo JavaScript en Bytecode.
+12. JavaScript se creo con el proposito de hacer que las paginas web fuesen mas dinamicas.
+13. El navegador que creo JavaScript fue Netscape.
+14. El primer nombre de JavaScript fue Mocha.
+
+
+
+1. Codigo de ejecucion: JavaScript solo puede hacer una tarea a la vez
+  1.1 Memory Heap: Es donde se van a almacenar los valores de las variables y las funciones, sin ningun tipo de orden.
+  1.2 Call Stack: Es la pila de tareas pendientes que se crea al momento de ejecutar una funcion, al momento de completar todas las tareas se ejecuta la siguiente funcion y vuelve a empezar el ciclo. A su vez el Call Stack un mecanismo que utilizan los interpretes para saber en que lugar de un script que llama a multiples funciones estan, la funcion que se esta ejecutando actualmente y que otras funciones se llaman del interior de esa funcion. Cuando el stack toma mas espacio del que tenia asignado causa un error "stack overflow".
+3. Garbage Collection: Es el proceso que limpia la memoria de los datos no utilizados para no sobrecargarla y seguir trabajando sin problemas.
+  3.1. El algoritmo Mark & Sweep hace referencia a cuando un tipo de dato se vuelve inalcanzable para el programa y esta listo para ser removido de memoria por el Garbage Collection.
+4. Stack Overflow: Es cuando tenemos mas tareas de las que podemos procesar en el call stack.
+5. JavaScript Runtime: que ejecuta tareas de manera sincrona.
+6. JavaScript Asynchronous: 
